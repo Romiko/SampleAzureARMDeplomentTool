@@ -1,0 +1,26 @@
+{
+  "umqa": {
+    "subscription": "TODOBanpu",
+    "location": "australiaeast",
+    "ipbase": "10.5.100",
+    "primarydns": "10.2.103.36",
+    "secondarydns": "10.2.103.37",
+    "deployments": [
+      {
+        "templateFile": "./VNet/VNetDNS.json",
+        "paramsFile": "./umqa/VNet.parameters.json",
+        "resourceGroupSuffix": "VNet"
+      },
+      {
+        "templateFile": "./Templates//DockerHostSubnet/DockerHostSubnet.json",
+        "paramsFile": "./Environments/umqa/DockerHostSubnet.parameters.json",
+        "resourceGroupSuffix": "VNet"
+      },
+      {
+        "templateFile": "./Templates/DockerHostVM/DockerHostVirtualMachine.json",
+        "paramsFile": "./Environments/umqa/DockerHostVirtualMachine.parameters.json",
+        "resourceGroupSuffix": "VirtualMachines"
+      }
+    ]
+  }
+}

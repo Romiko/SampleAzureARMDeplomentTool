@@ -1,0 +1,18 @@
+{
+    "umqa": {
+        "subscription": "Banpu",
+        "location": "australiaeast",
+        "deployments": [
+            {
+                "templateFile": "./Templates/KeyVault/KeyVault.json",
+                "paramsFile": "./Environments/umqa/KeyVault.parameters.json",
+                "resourceGroupSuffix": "umqa-KeyVault"
+            },
+            {
+                "templateFile": "./Templates/KeyVaultSecret/KeyVaultSecret.json",
+                "paramsFile": "./Environments/umqa/dockerHostVMadminpassword.parameters.json",
+                "resourceGroupSuffix": "umqaKeyVault"
+            }
+        ]
+    }
+}
