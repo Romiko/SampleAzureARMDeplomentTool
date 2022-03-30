@@ -1,4 +1,4 @@
-# uma-infrastructure
+# Infrastructure
 Deploy Cloud Infrastructure
 
 # Configuration
